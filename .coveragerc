@@ -1,0 +1,3 @@
+[run]
+source = lj
+omit = lj/test*

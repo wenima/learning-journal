@@ -1,0 +1,31 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+    {% if post %}
+    <h1>{{ post.title }}</h1>
+    {% endif %}
+    <div class="container-fluid">
+            <div class='main'>
+                      <div class='row'>
+                        <h2>Edit the post from {{ post.creation_date }}</h2>
+                      </div>
+                <form class='form-horizontal'>
+                  <div class='form-group'>
+                    <label for='Name' class='col-md-4 control-label'>Title</label>
+                    <div class='col-md-8'>
+                        <input class='form control input-lg' type='text' id='Name' value="{{ post.title }}">
+                    </div>
+                  </div>
+                 <div class='form-group'>
+                    <label for='Post' class='col-md-4 control-label'>Post</label>
+                    <div class='col-md-8'>
+                        <textarea class='form control input-lg' rows='8' style='min-width: 70%' id='Post'>{{ post.body }}</textarea>
+                    </div>
+                </div>
+                  <button type='submit' id='btn-submit'>Submit</button>
+                </form>
+            </div>
+    </div>
+</div>
+{% endblock content %}

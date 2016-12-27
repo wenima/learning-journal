@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Learning Journal{%
+    endblock %}</title>
+    <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ request.static_path('lj:static/style.css') }}" type="text/css">
+</head>
+<body>
+    <nav>
+        <div class='vertical-container'>
+            <div class='Home'>
+                <button type='button' class='btn'>
+                    <a href="{{ request.route_url('home') }}">Home</a>
+                </button>
+            </div>
+            <div class='Post'>
+                <button type='button' class='btn'>
+                    <a href="{{ request.route_url('create') }}">New Post</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

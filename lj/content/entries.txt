@@ -1,0 +1,102 @@
+Title: Today I learned...
+Date: Saturday, 24 December, 2016, 8:59 am
+Hopefully, this will be the last entry here.
+
+Excited for working with graphs and that it will our main data struct going forward.
+
+The presentations were really interesting and you could see the relief in the faces of people in the groups that they got a demo-able product. Either testing in iOS is hard or habbit got the better of them.
+
+
+Title: Today I learned...
+Date: Friday, 23 December, 2016, 8:53 am
+that the little things really matter.
+
+It's somewhat clear/makes sense when Nick is live coding. A bit sad that graphs got pushed as I almost need the data structure enjoyment and satisfaction of working code to balance off the other assignment.
+
+So while it all makes sense in live coding, I stumbled on little things when going away and doing it myself. I spent hours trying to debug one issue with my layout template which through cryptic error. Then commented it out html style only to have the same error appear again. Took another hour before I realized that jinja2 templates don't use html-style comments.. obv facepalm.
+
+I almost wish we would do the insert statements manually w straight up sql. I wrote down a goal to make the creation of pyramid a flowchart as I still find myself manically jumping around from lecture video to lecture notes to my own notes during class.
+
+I think the simple solution is: just do it like 10 times and it will stick, the problem is that there is no time to do it 10 times so at least taking the foot off the pedal for a moment yesterday was great.
+
+Time for a Confucius quote: I hear and I forget I see and I remember I do and I understand
+
+Title: Days continue to be on opposite ends
+Date: Thursday, 22 December, 2016, 8:55 am
+On my way to class this morning I realized our implementation of binheap had a glaring error and once again I kicked myself for not being more influential during the creation of the tests. It seem most concepts of pair programming have stopped and I'm not here to tell people that they have to follow a method when they don't see the value in it so I'm going with whatever is comfortable for my partner.
+
+Data structure assignment was very interesting that we had to manage another element of priority, which is the time of entry into the queue and manage that accordingly. I think we came up with a clever solution but no doubt it will go the same way as all the days before which is me feeling good about an assignment and then a TA pokes barn-sized holes into it. Need to do more testing, like seriously adapting the mindset of really trying very hard to break the structure instead of making stuff just work. Whiteboarding with partner to get on the same page continues to be a good idea to get on the same page.
+
+The pair assignment of the server is defacto dead with my partner being out but at the same time declaring that he finds it easier to do everthing by himself. This poses a serious issue for me as I have not gone through 301 so I have to warm up to the fact that the server assignments this week will probably be a goose egg. Nick has pointed this out prior to the course that I will fall behind on the webstuff and he was right. Don't know what the solution is.
+
+Today I learned a few things actually: I have the wrong mindset when writing tests for the data structure calling the string representation on the query object shows you the sql and that you can interrogate the query object for all sorts of useful information.
+
+Title: The race is on
+Date: Wednesday, 21 December, 2016, 8:13 am
+this week will be a continuation of the previous week where I will be struggling mightily as I have not attended 301 and various courses on codecademy or codeschool just aren't cutting it to be a precursor for any topic that is a little indepth. Nick flew through jinja2 today as I was trying to keep up with it. In the evening, I rewatched the entire lecture and there is so much good stuff I miss when I'm keeping up typing.
+
+binary heap is really interesting data structure. Me and my partner went to the whiteboard to get on the same page and he just wrote it down in one go and we got back to the code. The most difficult part of this assignment was to communicate the test approach today but we got on the same eventually. I hit a brick wall in the middle of one of the helper functions so my energy is still at super low levels which makes it tricky to write good code in a speedy manner. We did not manage to make a heap both ways, hopefull there will be more time in the off week to revisit.
+
+I'm really excited on the possibility of using dynamic content and jinja2 makes a lot of sense but I don't have a working version yet, there are just too many moving parts at the moment and I only have very basic scaffold testing. It hasn't clicked just yet as enviroment issues took a big chunk of my time.
+
+Oh, and some really useful git stuff. Say you work on a branch and quickly want to go into a different repo/branch, you just stash it and when you return, quickly go back to it. Very useful.
+
+git stash saves current work git stash list git stash apply or git stash apply {listid}
+
+Title: Today I learned..
+Date: Saturday, 17 December, 2016, 8:51 am
+today I learned that I still struggle to write good, workin code in a speedy manner but it went better than the other Gist coding challenges.
+
+the whiteboard challenge was really fun, I enjoy drawing out solutions but didn't have time to finish the actual code but will return to that.
+
+My partner and I got on the same page and we made good progress on the server assignment but it's still uphill.
+
+Title: Night and Day
+Date: Friday, 16 December, 2016, 8:58 am
+Today in class I didn't learn much, we literally just read through 2 paragraphs of concurrency and I know as much about it as I knew before the class. That it exists and there are different ways to go about solving it and none is perfect. Ok.
+
+Whenever some topic makes an appearance that is distinctively different to Java I get interested so was trying to absorb the concept of properties that can be used in a declarative style. The problem is that there is so much to do in the assignments that all of the concepts I would like to think about and work into my code go right out the door so other than hearing about them, I again, didn't really learn anything.
+
+I did learn somthing by watching the video: "Stop writing classes" which was entertaining and informative and it had great takeaways. Don't use classnames for taxonomy, don't build something because you thinkg you might need it in the future, if a class has 2 methods, one of them being init, it shouldn't be a class. The Q&A at the end of the video showed though that it's not all black&white. I have to explore more on the concepts of storing globals in a class.
+
+Assignments were night and day. Everthing clicked on the data structure assignment wen we blazed right through it allthough we started with a great example of why not to mutate things. I agreed to take an easy approach in how to pass in the iterable and my partner found a method to reverse a list but it also mutates it in place which now broke the tests. Cost us a good 30m to figure it out. So mutate things if you have lots of time is the takeaway. Python gives you the ability to alwasy return something and work with that return for a reason.
+
+Server assignment was polar opposite experience. Progress came to a screeching halt and I feel like I'm not even speaking the same language. Sitting next to each other but not saying even telling the other person which file is being changed/pushed/etc just frustrates me. There probably is a good portion of my inability to explain but there are clearly other factors as well.
+
+Missing sleep def got to me today. I couldn't figure out why my gist wasn't working and all I did was that I forgot to unpack the tuple by missing a * and I also got frustrated towards the end of the server coding which I consider to be a fail
+
+
+Title: Today I learned...
+Date: Thursday, 15 December, 2016, 8:51 am
+more about fixtures which I find super helpful. I started using the capsys fixture for the mailroom program and really got interested in using it more. Glad to know about scope now, it makes immediate sense.
+
+Also it was useful to learn about class methods, they don't go through the instance for lookup but go directly to the class. I don't have a good use case yet that I can think of but I'm sure it will present itself soon.
+
+The most useful thing I learned as that super classes work differently in Python where the child determines the order of the tree and a class might get called that is not a parent of the immediate parent of the child using the method resolution order.
+
+Today we impleted the doubly linked list which I got to a bit late as I was refactoring the tests for the linked list first while my partner did a great job in mapping out the testing. He wrote the first 10 tests, I wrote the classes/function and when I was 100% complete on tests, I fetched the next round of tests. We need to do a better job at actually reading the assignment though as the README was not in place and it actually required a paragraph about when to use doubly linked list vs linked list. It's a time consuming job to get that readme right.
+
+After coding up the initial server by myself 2 days ago until late night, server didn't get much love today as I went to PuPPy meetup where one of the co founders from Kitt.AI gave a presentation. After watching "Her" I was already mind blown and it was fascinating to really see the vision of interacting with bots come to realization. Very fascinating field that I would like to get into as I'm very passionate about effective workflows and bots offer a solution.
+
+
+Title: Goal: 100% Result: Win... (well, almost)
+Date: Wednesday, 14 December, 2016, 12:16 am
+I've operated on 2h of sleep today and it was very noticeable. Nick was sharp as always and pointed out that getting the last 4 chars of a string when you expect \r\n is actually not going to work because these are 2 chars. Off to a good start. While my fellow classmates were comparing against something that doesn't exist, I was wrestling with various tries of timeouts to determine if a client is still sending. Should I really care if the client is still sending? I used an immensely useful tactic some old timer gave me when I was fretting over not finding an email: > "If it's important, they'll send it again and then send you another mail asking if you read the previous two". But what sounded good on paper did not work so I decided today to full concentrate on the data structures and clean testing using fixtures.
+
+But before that we rushed through the HTTP Protocol which needs to be absorbed fully as I expect this will be very central when doing Pyramid and Django. I was also looking for some modules/libraries as the wrapper around the socket object is low-level and close to C and so doesn't come with alot of things to help manage the connections.
+
+The code review this morning was very helpful and it's all so clear if Nik is typing it up. Very much enjoyed the official appearance of fixtures. I used the capsys fixtures on the mailroom assignment to capture and ets sdtout. They are immensely useful.
+
+Before I could get to testing we talked about Inheritance vs Composition and while abstract at first, it really makes sense to stay away from Inheritance, even if they are fine for smaller projects but it's just the style of programming and a way of thinking and one day, if that style prevails, large systems will be build with Inheritance and it will become immensely difficult to manage.
+
+While it makes sense on paper to inherit from an Animal class when building a cat class and that cat class shares attributes of the Mammal class, the complex systems programmers are thrown into are not like that. Unless you are building a geneology website for your cat or whatever, a real programmer is more likely to find himself thrown into a codebase that is way more abstract: class FactoryManager extends Factory?? Exactly..
+
+The concepts we fly through in the first part of the day can't really be learned, at least not on 2h of sleep until they are put into action. The issue I have right now is that my understanding of the concepts are lacking behind the course by about 2 days and I need to keep it at that so I can catchup on the weekend.
+
+My partner was off to the races and I was happily sinking my teeth into testing today, first building out the tests for the to-be-programmed Stack and then refactoring the tests for the previous day's assignment. What I love about the stages of grasping a concept is that you can go back and see everthing clearer all of a sudden. Where you see a lengthy for loop you now see a list comprehension. Where you see anything that you think can be counted, you are eager to check if it's an iterable. And if not, make it into one!
+
+Once the tests were written I went back to complete all the tests across Stack and Linked List and my goal was 100% .
+
+On my way to that number I found few issues in the code and one pretty big issue that was missed and I was hoping I could beat any of the TAs before they reviewed it. No such luck unfortunately.
+
+Having a solid test suite is so immensiley helpful in refactoring code. At one point I was close my goal but one of the TAs agreed with me, pytest was acting up and showing code as not tested allthough it clearly was entered and ran successfully. So reverted to a small trick so I could achieve my goal for the day.

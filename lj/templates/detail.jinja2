@@ -1,0 +1,22 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block body %}
+<h1>{{ post.title }}</h1>
+
+<p>
+    {{ post.creation_date }}
+</p>
+
+<p>
+    {{ post.body }}
+</p>
+
+<p>
+    <div class='Edit'>
+    <button type='button' class='btn'>
+        <a href="/edit/{{ post.id }}">Edit</a>
+    </button>
+    </div>
+</p>
+{% endblock %}
