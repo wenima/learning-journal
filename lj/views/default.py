@@ -3,6 +3,7 @@ from pyramid.view import view_config
 from sqlalchemy.exc import DBAPIError
 from pyramid.httpexceptions import HTTPFound
 from ..models import Post
+from ..security import check_credentials
 
 @view_config(route_name='home', renderer='../templates/home.jinja2')
 def home(request):
@@ -35,6 +36,15 @@ def create_post(request):
         new_post = Post(title=title, body=body, creation_date=creation_date)
         request.dbsession.add(new_post)
         return HTTPFound(request.route_url('home'))
+    return {}
+
+@view_config(route_name="login", renderer="../templates/login.jinja2")
+def login_view(request):
+    if request.POST:
+        username = request.POST["username"]
+        password = request.POST["password"]
+        if check_credentials(username, password):
+            return HTTPFound(request.route_url('home'))
     return {}
 
 

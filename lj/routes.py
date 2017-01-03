@@ -4,3 +4,4 @@ def includeme(config):
     config.add_route('detail', '/detail/{id:\d+}')
     config.add_route('edit', '/edit/{id:\d+}')
     config.add_route('create', '/publish')
+    config.add_route('login', '/login')
