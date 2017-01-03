@@ -13,7 +13,7 @@ class Post(Base):
     __tablename__ = 'entries'
     id = Column(Integer, primary_key=True)
     title = Column(Unicode)
-    body = Column(Integer)
+    body = Column(Unicode)
     creation_date = Column(Date)
 
 

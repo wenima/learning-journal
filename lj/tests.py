@@ -86,6 +86,10 @@ def db_session(configuration, request):
     request.addfinalizer(teardown)
     return session
 
+# @pytest.fixture(db_session, request)
+# def dummy_request(db_session):
+#     return testing.DummyRequest(dbsession=db_session)
+
 # def test_model_gets_added(new_session):
 #     assert len(new_session.query(MyModel).all()) == 0
 #     model = MyModel(name="Bob", value=42)

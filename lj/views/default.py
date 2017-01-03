@@ -1,6 +1,7 @@
 from pyramid.response import Response
 from pyramid.view import view_config
 from sqlalchemy.exc import DBAPIError
+from pyramid.httpexceptions import HTTPFound
 from ..models import Post
 
 @view_config(route_name='home', renderer='../templates/home.jinja2')
@@ -33,7 +34,7 @@ def create_post(request):
         creation_date = request.POST["creation_date"]
         new_post = Post(title=title, body=body, creation_date=creation_date)
         request.dbsession.add(new_post)
-        return HTTPFound(request.route_url('list'))
+        return HTTPFound(request.route_url('home'))
     return {}
 
 
