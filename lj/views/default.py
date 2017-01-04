@@ -4,6 +4,19 @@ from sqlalchemy.exc import DBAPIError
 from pyramid.httpexceptions import HTTPFound
 from ..models import Post
 from ..security import check_credentials
+from pyramid.security import NO_PERMISSION_REQUIRED
+
+# @view_config(route_name='private', renderer='string', permission='secret')
+# def private(request):
+#     return "I am a private view"
+#
+# @view_config(route_name='public', renderer='string')
+# def public(request):
+#     return "I am a public view"
+
+# @view_config(route_name='login', renderer='string', permission=NO_PERMISSION_REQUIRED)
+# def login(request):
+#     # log in a user
 
 @view_config(route_name='home', renderer='../templates/home.jinja2')
 def home(request):

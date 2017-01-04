@@ -1,6 +1,6 @@
 import os
 from pyramid.authentication import AuthTktAuthenticationPolicy
-from pyramid.authentication import ACLAuthorizationPolicy
+from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.security import Everyone, Authenticated
 from pyramid.security import Allow
 
@@ -16,7 +16,7 @@ class MyRoot(object):
 
 def check_credentials(username, password):
     if username and password:
-        if username == os.environ("AUTH_USERNAME")
+        if username == os.environ("AUTH_USERNAME"):
             if password == os.environ("AUTH_PASSWORD"):
                 return True
     return False
@@ -32,3 +32,4 @@ def includeme(config):
     authz_policy = ACLAuthorizationPolicy()
     config.set_authorization_policy(authz_policy)
     config.set_default_permission('view')
+    config.set_root_factory(MyRoot)
