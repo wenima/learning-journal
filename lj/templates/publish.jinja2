@@ -2,6 +2,8 @@
 
 {% block body %}
     <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{
+        request.session.get_csrf_token() }}">
         <label for="title">Title</label><br/>
         <input type="text" name="title"/><br/>
         <label for="body">Body</label><br/>

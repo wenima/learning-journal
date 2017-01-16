@@ -97,17 +97,6 @@ def main(argv=sys.argv):
 
     with transaction.manager:
         dbsession = get_tm_session(session_factory, transaction.manager)
-        d = datetime.date.today()
-        i = 0
-        for entry in ENTRIES:
-            i += 1
-            model = Post(
-                id=i,
-                title = entry['title'],
-                body = entry['body'],
-                creation_date = d.replace(day=int(entry['creation_date']))
-            )
-            dbsession.add(model)
 
         model = Post(id=0,
             title="Goal: 100% Result: Win... (well, almost)",
