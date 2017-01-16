@@ -3,6 +3,7 @@ from pyramid.authentication import AuthTktAuthenticationPolicy
 from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.security import Everyone, Authenticated
 from pyramid.security import Allow
+from pyramid.session import SignedCookieSessionFactory
 
 class MyRoot(object):
 
@@ -16,8 +17,8 @@ class MyRoot(object):
 
 def check_credentials(username, password):
     if username and password:
-        if username == os.environ("AUTH_USERNAME"):
-            if password == os.environ("AUTH_PASSWORD"):
+        if username == os.environ["AUTH_USERNAME"]:
+            if password == os.environ["AUTH_PASSWORD"]:
                 return True
     return False
 
@@ -33,3 +34,8 @@ def includeme(config):
     config.set_authorization_policy(authz_policy)
     config.set_default_permission('view')
     config.set_root_factory(MyRoot)
+    #guard againset CSRF
+    session_secret = os.environ.get("SESSION SECRET", 'itsaseekrit')
+    session_factory = SignedCookieSessionFactory(session_secret)
+    config.set_session_factory(session_factory)
+    config.set_default_csrf_options(require_csrf=True)
