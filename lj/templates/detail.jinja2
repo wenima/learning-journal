@@ -3,6 +3,7 @@
 {% block title %}{{ post.title }}{% endblock %}
 {% block body %}
 <h1>{{ post.title }}</h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ post.title }}" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>
     {{ post.creation_date }}
